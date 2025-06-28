@@ -1,0 +1,14 @@
+{"timestamp":"2025-06-28T16:54:06.114965","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-28T16:54:06.115470","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/test_json_parse_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-28T16:54:06.642657Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T16:54:06.643234Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T16:54:06.643583Z","level":"info","event":"Current task name:load_to_bigquery","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T16:54:06.643873Z","level":"info","event":"Dag name:test_json_parse_dag","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T16:54:06.661559","level":"info","event":"Connection Retrieved 'google_cloud_default'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-06-28T16:54:06.661988","level":"info","event":"Using existing BigQuery table for storing data...","logger":"airflow.task.operators.airflow.providers.google.cloud.transfers.gcs_to_bigquery.GCSToBigQueryOperator"}
+{"timestamp":"2025-06-28T16:54:06.662126","level":"info","event":"Getting connection using `google.auth.default()` since no explicit credentials are provided.","logger":"airflow.providers.google.cloud.utils.credentials_provider._CredentialProvider"}
+{"timestamp":"2025-06-28T16:54:06.712283","level":"info","event":"Executing: {'load': {'autodetect': True, 'createDisposition': 'CREATE_IF_NEEDED', 'destinationTable': {'projectId': 'hyperconnect-464313', 'datasetId': 'dataset01', 'tableId': 'table_a'}, 'sourceFormat': 'NEWLINE_DELIMITED_JSON', 'sourceUris': ['gs://my-hyper-bucket/input_data.json'], 'writeDisposition': 'WRITE_TRUNCATE', 'ignoreUnknownValues': False}}","logger":"airflow.task.operators.airflow.providers.google.cloud.transfers.gcs_to_bigquery.GCSToBigQueryOperator"}
+{"timestamp":"2025-06-28T16:54:06.712601","level":"info","event":"Inserting job airflow_test_json_parse_dag_load_to_bigquery_2025_06_28T16_54_03_786000_00_00_72038f464c7f0d7a2923e9f0549bd879","logger":"airflow.task.hooks.airflow.providers.google.cloud.hooks.bigquery.BigQueryHook"}
+{"timestamp":"2025-06-28T16:54:10.602616Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T16:54:10.603062Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T16:54:10.603411Z","level":"info","event":"Task operator:<Task(GCSToBigQueryOperator): load_to_bigquery>","chan":"stdout","logger":"task"}

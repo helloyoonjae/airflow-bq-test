@@ -1,0 +1,25 @@
+{"timestamp":"2025-06-28T12:16:21.836928","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-28T12:16:21.837489","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/test_json_parse_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-28T12:16:21.886712Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.887329Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.887638Z","level":"info","event":"Current task name:parse_json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.887859Z","level":"info","event":"Dag name:test_json_parse_dag","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.888091Z","level":"info","event":"✅ Parsed output:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.888349Z","level":"info","event":"[","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.888563Z","level":"info","event":"  {","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.888807Z","level":"info","event":"    \"dt\": \"2025-06-27\",","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.889011Z","level":"info","event":"    \"hr\": 10,","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.889180Z","level":"info","event":"    \"id\": 1,","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.889334Z","level":"info","event":"    \"user_name\": \"alice\"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.889481Z","level":"info","event":"  },","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.889634Z","level":"info","event":"  {","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.889801Z","level":"info","event":"    \"dt\": \"2025-06-27\",","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.889960Z","level":"info","event":"    \"hr\": 11,","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.890111Z","level":"info","event":"    \"id\": 2,","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.890255Z","level":"info","event":"    \"user_name\": \"bob\"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.890405Z","level":"info","event":"  }","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.890544Z","level":"info","event":"]","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.890688Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.890831Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.890970Z","level":"info","event":"Task operator:<Task(PythonOperator): parse_json>","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-28T12:16:21.878818","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}
