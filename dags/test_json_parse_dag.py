@@ -1,5 +1,6 @@
 from airflow import DAG
 from datetime import datetime
+import pendulum
 from airflow.providers.google.cloud.transfers.gcs_to_bigquery import GCSToBigQueryOperator
 
 # GCP 연결 ID
@@ -12,14 +13,11 @@ table_id = {
 source_uri = "gs://my-hyper-bucket/input_data.json"
 # https://cloud.google.com/bigquery/docs/external-table-definition
 
-default_args = {
-    "start_date": datetime(2024, 1, 1),
-}
-
 with DAG(
     dag_id="test_json_parse_dag",
-    default_args=default_args,
-    schedule=None,  # 수동 실행
+    #schedule=None,  # 수동 실행
+    schedule="0 10 * * *",  # 매일 오전 10시 (KST)
+    start_date=datetime(2025, 6, 30, tzinfo=pendulum.timezone("Asia/Seoul")),
     catchup=False,
     tags=["example"],
 ) as dag:
@@ -29,7 +27,7 @@ with DAG(
         task_id="load_to_bigquery",
         bucket="my-hyper-bucket",
         source_objects=["input_data.json"],
-        destination_project_dataset_table="hyperconnect-464313.dataset01.table_a",
+        destination_project_dataset_table="hyperconnect-464313.dataset01.table_b",
         source_format="NEWLINE_DELIMITED_JSON",
         write_disposition="WRITE_TRUNCATE",
         autodetect=True,
